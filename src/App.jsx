@@ -75,8 +75,6 @@ function App() {
       const checkList = carts.map((item) => item.id === value.id && item.qty <=9 ? {...item,qty:(item.qty += value.qty)} : item);
       setCarts(checkList);
       setTotal(sunTotal(checkList));
-      setTimeout(() => {
-      },1000);
     } else {
       setCarts([...carts, value]);
       setTotal(sunTotal([...carts, value]));
